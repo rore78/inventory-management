@@ -6,6 +6,7 @@ export default {
     orders: 'Orders',
     finance: 'Finance',
     demandForecast: 'Demand Forecast',
+    restocking: 'Restocking',
     companyName: 'Catalyst Components',
     subtitle: 'Inventory Management System'
   },
@@ -106,6 +107,12 @@ export default {
     title: 'Orders',
     description: 'View and manage customer orders',
     allOrders: 'All Orders',
+    submittedOrders: 'Submitted Orders',
+    submittedDate: 'Submitted',
+    leadTime: 'Lead Time',
+    leadTimeDays: '{days} days',
+    noSubmittedOrders: 'No restock orders have been submitted yet.',
+    goToRestocking: 'Go to Restocking',
     totalOrders: 'Total Orders',
     totalRevenue: 'Total Revenue',
     avgOrderValue: 'Avg Order Value',
@@ -126,6 +133,39 @@ export default {
       status: 'Status',
       expectedDelivery: 'Expected Delivery',
       actualDelivery: 'Actual Delivery'
+    }
+  },
+
+  // Restocking
+  restocking: {
+    title: 'Restocking',
+    description: 'Plan restock orders for items with a demand gap, within your budget',
+    budget: 'Budget',
+    budgetHint: 'Items are picked in order of urgency until the budget is used up',
+    recommendedItems: 'Recommended Items',
+    excludedItems: 'Not Included',
+    excludedHint: 'These items do not fit the remaining budget',
+    totalCost: 'Recommended Total',
+    remaining: 'Remaining Budget',
+    itemCount: 'Items',
+    maxLeadTime: 'Max Lead Time',
+    placeOrder: 'Place Order',
+    placing: 'Placing order...',
+    success: 'Order {orderNumber} was submitted.',
+    viewOrders: 'View orders',
+    empty: 'No items need restocking right now.',
+    emptyRecommended: 'No items fit the current budget. Increase the budget to see recommendations.',
+    loadError: 'Failed to load restock candidates',
+    orderError: 'Failed to place order',
+    days: '{days} days',
+    table: {
+      sku: 'SKU',
+      item: 'Item',
+      trend: 'Trend',
+      quantity: 'Quantity',
+      unitCost: 'Unit Cost',
+      lineCost: 'Line Cost',
+      leadTime: 'Lead Time'
     }
   },
 
@@ -201,6 +241,7 @@ export default {
   // Statuses
   status: {
     delivered: 'Delivered',
+    submitted: 'Submitted',
     shipped: 'Shipped',
     processing: 'Processing',
     backordered: 'Backordered',
